@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Productos Fitness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="contenedor-inventario">
+        <h1>Inventario de Productos Fitness</h1>
+
+        
+        <section class="seccion-formulario">
+            <form id="formulario-producto" class="formulario-producto">
+                <div class="grupo-formulario">
+                    <label for="nombre-producto">Nombre del Producto:</label>
+                    <input type="text" id="nombre-producto" class="campo-entrada" placeholder="Ingrese el nombre del producto" required>
+                </div>
+                
+                <div class="grupo-formulario">
+                    <label for="categoria-producto">Categoría:</label>
+                    <input type="text" id="categoria-producto" class="campo-entrada" placeholder="Ingrese la categoría" required>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="cantidad-producto">Cantidad:</label>
+                    <input type="number" id="cantidad-producto" class="campo-entrada" placeholder="Ingrese la cantidad" required>
+                </div>
+
+                <div class="grupo-formulario">
+                    <label for="precio-producto">Precio:</label>
+                    <input type="number" id="precio-producto" class="campo-entrada" placeholder="Ingrese el precio" required>
+                </div>
+
+                <button type="submit" class="boton-submit">Agregar Producto</button>
+            </form>
+        </section>
+
+        
+        <section class="lista-inventario">
+            <h2>Lista de Productos</h2>
+            <table id="tabla-inventario" class="tabla-inventario">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla">
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

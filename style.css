@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor-inventario {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+.formulario-producto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-entrada {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.boton-submit {
+    padding: 10px;
+    background-color: #4bc2ba;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton-submit:hover {
+    background-color: #4bc2ba;
+}
+
+.tabla-inventario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-inventario th, .tabla-inventario td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabla-inventario th {
+    background-color: #4bc2ba;
+    color: white;
+}
+
+.tabla-inventario tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla-inventario tr:hover {
+    background-color: #ddd;
+}
+
+button.boton-eliminar {
+    background-color: rgb(171, 126, 183);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.boton-eliminar:hover {
+    background-color: rgb(18, 69, 74);
+}
