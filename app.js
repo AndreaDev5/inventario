@@ -1,4 +1,4 @@
-// Clase para representar un producto
+
 class Producto {
     constructor(nombre, categoria, cantidad, precio) {
         this.nombre = nombre;
@@ -7,7 +7,7 @@ class Producto {
         this.precio = precio;
     }
 
-    // Método para devolver los detalles en formato de tabla
+    
     mostrarDetalles() {
         return `
             <tr>
@@ -21,39 +21,38 @@ class Producto {
     }
 }
 
-// Clase para gestionar el inventario
+
 class Inventario {
     constructor() {
         this.productos = [];
     }
 
-    // Método para agregar producto
+    
     agregarProducto(producto) {
         this.productos.push(producto);
         this.mostrarInventario();
     }
 
-    // Método para mostrar el inventario en la tabla HTML
+    
     mostrarInventario() {
         const tabla = document.getElementById('cuerpo-tabla');
-        tabla.innerHTML = ''; // Limpiar la tabla
+        tabla.innerHTML = ''; 
 
-        // Agregar cada producto al cuerpo de la tabla
+        
         this.productos.forEach(producto => {
             tabla.innerHTML += producto.mostrarDetalles();
         });
 
-        // Agregar evento para eliminar producto
         this.eliminarProductoEvent();
     }
 
-    // Método para eliminar producto
+    
     eliminarProducto(nombre) {
         this.productos = this.productos.filter(producto => producto.nombre !== nombre);
         this.mostrarInventario();
     }
 
-    // Agregar el evento para eliminar producto desde la tabla
+    
     eliminarProductoEvent() {
         const botonesEliminar = document.querySelectorAll('.boton-eliminar');
         botonesEliminar.forEach((boton, index) => {
@@ -65,28 +64,28 @@ class Inventario {
     }
 }
 
-// Crear instancia del inventario
+
 const miInventario = new Inventario();
 
-// Capturar el formulario
+
 const formulario = document.getElementById('formulario-producto');
 
-// Evento para agregar producto al inventario
-formulario.addEventListener('submit', function (event) {
-    event.preventDefault(); // Evitar recarga de página
 
-    // Capturar los valores del formulario
+formulario.addEventListener('submit', function (event) {
+    event.preventDefault(); 
+
+    
     const nombre = document.getElementById('nombre-producto').value;
     const categoria = document.getElementById('categoria-producto').value;
     const cantidad = document.getElementById('cantidad-producto').value;
     const precio = document.getElementById('precio-producto').value;
 
-    // Crear un nuevo producto
+    
     const nuevoProducto = new Producto(nombre, categoria, cantidad, precio);
 
-    // Agregar el producto al inventario
+    
     miInventario.agregarProducto(nuevoProducto);
 
-    // Limpiar el formulario
+    
     formulario.reset();
 });
